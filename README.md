@@ -26,8 +26,10 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 Download the YoloV3 model from [here](https://pjreddie.com/media/files/yolov3.weights)
 
 For running backend server:
-```cd backend\Yolov3\```
-```python manage.py collectstatic```
-```python manage.py runserver```
+```
+cd backend\Yolov3\
+python manage.py collectstatic
+python manage.py runserver
 
-the api will be on ```127.0.0.1:8000/object_detection/api_request/```
+the api will be on 127.0.0.1:8000/object_detection/api_request/
+```
