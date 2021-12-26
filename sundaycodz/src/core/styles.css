@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*-------------------header styles starts here*/
+
+.headerMain .nav {
+  position: relative;
+  display: inline-block;
+  float: right;
+  margin-top: 20px;
+}
+.headerMain h1 {
+  font-size: 3rem;
+  font-family: Helvetica, sans-serif;
+  display: inline-block;
+  margin-left: 20px;
+}
+.headerMain ul {
+  display: inline-block;
+  float: right;
+  margin-right: 30px;
+}
+.headerMain ul a {
+  text-decoration: none;
+  font-family: Helvetica, sans-serif;
+}
+.headerMain ul a li {
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+/*-------------------header styles end here*/
+
+/*-------------------content styles starts here*/
+.contentMain {
+  position: relative;
+}
+.contentMain .grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 100px;
+}
+.contentMain .grid img {
+  width: 120px;
+  height: 120px;
+}
+.contentMain .grid a {
+  font-family: Helvetica, sans-serif;
+  text-decoration: none;
+}
