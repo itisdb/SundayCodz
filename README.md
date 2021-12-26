@@ -22,3 +22,5 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+Download the YoloV3 model from [here](https://pjreddie.com/media/files/yolov3.weights)

@@ -1,0 +1,5 @@
+django
+Pillow
+opencv-python
+django-cors-middleware
+django-cors-headers
