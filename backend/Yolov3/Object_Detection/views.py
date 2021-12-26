@@ -30,7 +30,7 @@ def object_detection_api(api_request):
             image = Image.open(io.BytesIO(image_bytes))
             result, detection_time = detection(image, web=False)
 
-    if result is not None:
+    if result:
         json_object['success'] = True
     json_object['time'] = str(round(detection_time))+" seconds"
     json_object['objects'] = result
