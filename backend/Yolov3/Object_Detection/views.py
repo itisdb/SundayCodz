@@ -16,7 +16,7 @@ from .Darknet import DarkNet
 def object_detection_api(api_request):
     json_object = {'success': False}
 
-    if api_request.method == "POST":
+    if api_request.method == 'POST':
 
         if api_request.POST.get("image64", None) is not None:
             base64_data = api_request.POST.get("image64", None).split(',', 1)[1]
@@ -30,7 +30,7 @@ def object_detection_api(api_request):
             image = Image.open(io.BytesIO(image_bytes))
             result, detection_time = detection(image, web=False)
 
-    if result:
+    if result is not None:
         json_object['success'] = True
     json_object['time'] = str(round(detection_time))+" seconds"
     json_object['objects'] = result

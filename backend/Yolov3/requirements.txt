@@ -3,3 +3,4 @@ Pillow
 opencv-python
 django-cors-middleware
 django-cors-headers
+whitenoise
