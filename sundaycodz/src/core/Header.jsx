@@ -4,15 +4,11 @@ import { Link } from 'react-router-dom'
 function Header() {
     return (
         <>
-          <div className='headerMain'>
-            <Link to="/"><h1>logo</h1></Link>
-                <div className='nav'>
-                    <ul>
-                        <a href="#"><li>Apps</li></a>
-                        <a href="#"><li>Tutorials</li></a>
-                        <a href="#"><li>Help</li></a>
-                    </ul>
-                </div>   
+          <div className='bg-blue-200 p-4 rounded text-gray-600 m-2 flex flex-col items-center align-center sm:flex-row '>
+            <div className='self-auto sm:flex-1 '><Link to="/"><h1 className='text-6xl font-bold underline'>logo</h1></Link></div>
+            <div className='self-auto sm:flex-1  my-auto'>Apps</div>
+            <div className='self-auto sm:flex-1  my-auto'>Tutorials</div>
+            <div className='self-auto sm:flex-1  my-auto'>Help</div>
           </div>  
         </>
     )
