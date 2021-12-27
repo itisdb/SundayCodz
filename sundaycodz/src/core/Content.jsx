@@ -5,30 +5,27 @@ import { Link } from 'react-router-dom'
 function Content() {
     return (
         <>
-            <div className='contentMain'>
-                <div className='grid'>
+            <main className="grid grid-cols-2 sm:grid-cols-4 justify-items-center gap-x-8 gap-y-10 px-5 py-2">
                     <Link to="/godseye">
-                    <div className='app1'>
+                    <div className='h-15 w-40'>
                         <img src={Godseyeimg} alt="na" />
                         <h2>Godseye</h2>
                     </div>
                     </Link>
-
                     
-                    <div className='app2'>
+                    <div className='h-15 w-40'>
                         <img src={Googletransimg} alt="na" />
                         <h2>Translate app</h2>
                     </div>
-                    <div className='app3'>
+                    <div className='h-15 w-40'>
                         <img src={Googletransimg} alt="na" />
                         <h2>app3</h2>
                     </div>
-                    <div className='app4'>
+                    <div className='h-15 w-40'>
                         <img src={Googletransimg} alt="na" />
                         <h2>app4</h2>
                     </div>
-                </div>
-            </div>   
+            </main>   
         </>
     )
 }

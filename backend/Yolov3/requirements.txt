@@ -4,3 +4,5 @@ opencv-python
 django-cors-middleware
 django-cors-headers
 whitenoise
+torch==1.5.1
+
