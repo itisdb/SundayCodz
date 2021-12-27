@@ -26,7 +26,7 @@ urlpatterns = [
     path('', RedirectView.as_view(url='object_detection/')),
     path('object_detection/api_request/', object_detection_api),
     path('translate/api_request/', translate_api),
-    path('detect/api_request/', detect_api)
+    path('translate/detect/api_request/', detect_api)
 
 ]
 urlpatterns += staticfiles_urlpatterns()

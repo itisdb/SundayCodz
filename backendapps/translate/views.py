@@ -1,3 +1,4 @@
+from charset_normalizer import api
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -22,20 +23,17 @@ def translate_api(api_request):
             json_object['success'] = True
             json_object['Translated'] = translated.text
             print(json_object)
-            return JsonResponse(json_object) 
-
     return JsonResponse(json_object)
 
+@csrf_exempt
 def detect_api(api_request):
     json_object = {'success': False}
 
     if api_request.method == "POST":
-        if api_request.POST.get("text", None) is not None:
-            text = str(api_request.POST.get("text", None))
-            print(text)
-            detector=Translator()
-            detected = detector.detect(text)
-            json_object['success'] = True
-            json_object['Language'] = detected.lang
-            print(json_object)
-            return JsonResponse(json_object)
+        text = str(api_request.POST.get("text"))
+        translator = Translator()
+        translated = translator.detect(text)
+        json_object['success'] = True
+        json_object['Detected'] = translated.lang
+        print(json_object)
+    return JsonResponse(json_object)
