@@ -5,24 +5,23 @@ from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 from PIL import Image
-import matplotlib.pyplot as plt
-import keras_ocr
+import cv2
+import pytesseract
+import numpy as np
 
 @csrf_exempt
-def ocr_api(api_request):
-    json_object = {'success': False}
-    if api_request.method == 'POST':
-        image_file = api_request.FILES['image']
-        image_data = image_file.read()
-        image = Image.open(image_file)
-        image_data = image.convert('L')
-        image_data = image_data.resize((28, 28))
-        image_data = image_data.convert('1')
-        image_data = image_data.tobytes()
-        image_data = image_data.reshape(1, 28, 28, 1)
-        result = keras_ocr.predict(image_data)
-        json_object['success'] = True
-        json_object['result'] = result
+def ocr_api(request):
+    json_object = {"success": False}
+    if request.method == "POST":
+        if request.FILES.get("image", None) is not None:
+            image = request.FILES["image"]
+            img = Image.open(image)
+            img = img.convert("RGB")
+            img = cv2.cvtColor(np.array(img), cv2.COLOR_RGB2BGR)
+            pytesseract.pytesseract.tesseract_cmd = r"E:\Tesseract\tesseract.exe"
+            text = pytesseract.image_to_string(img)
+            json_object["success"] = True
+            json_object["text"] = text
+        else:
+            json_object["message"] = "No image found"
     return JsonResponse(json_object)
-
-    
