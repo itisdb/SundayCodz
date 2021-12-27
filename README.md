@@ -26,7 +26,7 @@ Launches the test runner in the interactive watch mode.\
 Download the YoloV3 model from [here](https://pjreddie.com/media/files/yolov3.weights)
 Keep it inside \backendapps
 
-Now install the tesseract.exe for the tesseract OCR to work
+Now install the tesseract.exe for the tesseract OCR to work and install it in 'E:\Tesseract\tesseract.exe'
 
 For running backend server:
 
