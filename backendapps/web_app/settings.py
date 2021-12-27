@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Object_Detection.apps.DetectImageConfig',
+    'translate.apps.TranslateConfig',
 ]
 
 MIDDLEWARE = [
