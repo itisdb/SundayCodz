@@ -16,7 +16,7 @@ from .Darknet import DarkNet
 def object_detection_api(api_request):
     json_object = {'success': False}
 
-    if api_request.method == 'POST':
+    if api_request.method == "POST":
 
         if api_request.POST.get("image64", None) is not None:
             base64_data = api_request.POST.get("image64", None).split(',', 1)[1]
