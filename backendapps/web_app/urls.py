@@ -17,6 +17,7 @@ from django.urls import path
 from django.views.generic import RedirectView
 from Object_Detection.views import detect_request, object_detection_api
 from translate.views import translate_api, detect_api
+from ocr.views import ocr_api
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
@@ -26,8 +27,8 @@ urlpatterns = [
     path('', RedirectView.as_view(url='object_detection/')),
     path('object_detection/api_request/', object_detection_api),
     path('translate/api_request/', translate_api),
-    path('translate/detect/api_request/', detect_api)
-
+    path('translate/detect/api_request/', detect_api),
+    path('ocr/api_request/', ocr_api),
 ]
 urlpatterns += staticfiles_urlpatterns()
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

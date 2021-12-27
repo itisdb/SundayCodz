@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Object_Detection.apps.DetectImageConfig',
     'translate.apps.TranslateConfig',
+    'ocr.apps.OcrConfig',
 ]
 
 MIDDLEWARE = [

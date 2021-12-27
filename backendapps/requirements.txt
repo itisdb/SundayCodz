@@ -7,4 +7,5 @@ whitenoise
 torch
 requests
 googletrans==4.0.0-rc1
-
+keras-ocr
+tensorflow
