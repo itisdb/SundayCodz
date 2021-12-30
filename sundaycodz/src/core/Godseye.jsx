@@ -3,9 +3,10 @@ import WebcamCapture from '../resources/webcam/WebcamCapture'
 
 function Godseye() {
     return (
-        <div>
-            <h1>Gods-Eye</h1>
-            <WebcamCapture />
+        <div className='flex flex-col items-center'>
+            <div><h1 className="mt-12 pt-2 pb-4 text-4xl underline">Gods-Eye</h1></div>
+            <br></br>
+            <div><WebcamCapture className="mt-12 pt-2" /></div>
         </div>
     )
 }
