@@ -18,7 +18,7 @@ const WebcamCapture = () => {
             ref={webcamRef}
             screenshotFormat="image/jpeg"
           /><br></br>
-          <button className="rounded-md mb-6 mx-auto px-6 py-3 bg-blue-300 text-white shadow-md shadow-indigo-500/60 hover:shadow-indigo-500/80 hover:bg-blue-500 hover:shadow-lg font-semibold hover:font-bold" onClick={capture}>Capture photo</button>
+          <button className="rounded-md mb-6 mx-auto px-6 py-3 bg-blue-300/90 text-white shadow-md shadow-blue-500/50 hover:shadow-blue-500/70 hover:bg-blue-300 hover:shadow-lg font-semibold" onClick={capture}>Capture photo</button>
           {imgSrc && (
             <img
               src={imgSrc}

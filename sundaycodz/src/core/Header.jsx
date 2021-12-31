@@ -23,7 +23,7 @@ function Header() {
                         </ul>
                     </div>
                 </nav>
-                <div className='sm:flex-1 sm:col-span-2 mx-auto my-auto'><Link to="/"><button><h1 className='text-6xl font-bold underline'>Logo</h1></button></Link></div>
+                <div className='sm:flex-1 sm:col-span-2 mx-auto my-auto'><Link to="/"><button><h1 className='text-5xl font-bold underline'>Logo</h1></button></Link></div>
                 <div className='invisible sm:visible sm:flex-1 my-auto font-bold'>Apps</div>
                 <div className='invisible sm:visible sm:flex-1 my-auto font-bold'>Tutorials</div>
                 <div className='invisible sm:visible sm:flex-1 my-auto font-bold'>Github</div>
